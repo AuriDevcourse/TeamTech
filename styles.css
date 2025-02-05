@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: transparent;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #1a1a1a;
+    border-radius: 16px;
+    border: 1px solid rgba(242, 242, 242, 0.7);
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 400px;
+    position: relative;
+}
+
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to top, #111111 10%, transparent 100%);
+    z-index: 2;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    z-index: 3;
+}
+
+.card h3 {
+    background: linear-gradient(135deg, #FFA155 33%, #FF0028 48%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.card .title {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+    font-weight: 400;
+}
+
+.card .email {
+    margin: 0;
+}
+
+.card .email a {
+    color: #888;
+    opacity: 0.7;
+    text-decoration: underline;
+    font-size: 0.8rem;
+    transition: opacity 0.3s ease;
+}
+
+.card .email a:hover {
+    opacity: 1;
+}
+
+.linkedin-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    width: 30px;
+    height: 30px;
+}
+
+.linkedin-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.linkedin-icon:hover img {
+    opacity: 0.7;
+}
+
+.card a {
+    text-decoration: underline;
+    color: #d9d9d9;
+}
+
+.slideshow {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 500ms ease-in-out;
+    transform: scale(1);
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+    animation: kenburns 5000ms linear forwards;
+}
+
+@keyframes kenburns {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.card .vicinity-svg {
+    background-color: #d9d9d9;
+    border-radius: 8px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.card .vicinity-svg img {
+    height: auto;
+    width: 200px;
+    max-height: 130px;
+    object-fit: contain;
+}
+
+
+
+.subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Responsive Grid Layouts */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .card {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
+    }
+    
+    .card-image {
+        height: 250px;
+    }
+
+    .popup-content {
+        width: 95%;
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .popup-image {
+        height: 200px;
+    }
+
+    .title {
+        font-size: 20px;
+        min-height: 50px;
+    }
+
+    .popup-description {
+        font-size: 14px;
+        margin: 1rem 0;
+    }
+
+    .neon-button {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        height: auto;
+        min-height: 350px;
+    }
+
+    .popup-content {
+        padding: 1rem;
+    }
+
+    .popup-image {
+        height: 180px;
+    }
+
+    .popup-close {
+        top: 0.5rem;
+        right: 1rem;
+    }
+}
