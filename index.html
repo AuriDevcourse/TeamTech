@@ -9,46 +9,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .grid {
-            grid-template-columns: repeat(6, 1fr);
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="grid"></div>
+        <div class="grid-2"></div>
     </div>
 
     <script>
         const teamMembers = [
             { name: 'Avnit Singh', title: 'Chief Executive Officer', email: 'asg@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2021/04/17_Avnit-Singh_front.jpg', linkedin: 'https://www.linkedin.com/in/avnit-singh-a38b303/' },
-            { name: 'Kay Michelsen', title: 'Head of Program', email: 'km@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2021/04/02_-Kay-Michelsen_front.jpg', linkedin: 'https://www.linkedin.com/in/kay-michelsen/' },
-            { name: 'Sam Eshrati', title: 'Chief Operating Officer & Chief Engagement Officer', email: 'ses@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2021/03/01_Sam_Eshrati-front.jpg', linkedin: 'https://www.linkedin.com/in/sam-eshrati/' },
-            { name: 'Benjamin Notlev', title: 'Chief Commercial Officer & Chief Investment Officer', email: 'bno@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2021/04/03_Benjamin-Notlev_front.jpg', linkedin: 'https://www.linkedin.com/in/benjamin-notlev/' },
-            { name: 'Vera Liscinska', title: 'Head of Marketing', email: 'vli@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2022/03/VeraLi.webp', linkedin: 'https://www.linkedin.com/in/vera-liscinska/' },
-            { name: 'Mikkel Bendixsen', title: 'Head of Events', email: 'mbe@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2022/04/Mikkel-scaled-e1715608165763.jpg', linkedin: 'https://www.linkedin.com/in/mikkel-bendixsen/' },
-            { name: 'Stephan Evon', title: 'Head of Finance', email: 'sev@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2021/04/08_Stephan-Evon_front.jpg', linkedin: 'https://www.linkedin.com/in/stephan-evon/' },
-            { name: 'Maja Pavlek', title: 'HR Manager', email: 'mpa@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2023/05/Maja.png', linkedin: 'https://www.linkedin.com/in/maja-pavlek/' },
-            { name: 'Andreas M. Jensen', title: 'Head of Partnerships', email: 'amj@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2023/04/Andreas-e1715608226363.png', linkedin: 'https://www.linkedin.com/in/andreas-jensen/' },
+            { name: 'Kay Michelsen', title: 'Head of Program', email: 'km@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2021/04/02_-Kay-Michelsen_front.jpg', linkedin: 'https://www.linkedin.com/in/kay-michelsen-a11467151/' },
+            { name: 'Sam Eshrati', title: 'Chief Operating Officer & Chief Engagement Officer', email: 'ses@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2021/03/01_Sam_Eshrati-front.jpg', linkedin: 'https://www.linkedin.com/in/sameshrati/' },
+            { name: 'Benjamin Notlev', title: 'Chief Commercial Officer & Chief Investment Officer', email: 'bno@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2021/04/03_Benjamin-Notlev_front.jpg', linkedin: 'https://www.linkedin.com/in/benjamin-rej-notlev' },
+            { name: 'Vera Liscinska', title: 'Head of Marketing', email: 'vli@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2022/03/VeraLi.webp', linkedin: 'https://www.linkedin.com/in/vliscinska' },
+            { name: 'Mikkel Bendixsen', title: 'Head of Events', email: 'mbe@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2022/04/Mikkel-scaled-e1715608165763.jpg', linkedin: 'https://www.linkedin.com/in/bendixsen/' },
+            { name: 'Stephan Evon', title: 'Head of Finance', email: 'sev@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2021/04/08_Stephan-Evon_front.jpg', linkedin: 'https://www.linkedin.com/in/stephanevon' },
+            { name: 'Maja Pavlek', title: 'HR Manager', email: 'mpa@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2023/05/Maja.png', linkedin: 'https://www.linkedin.com/in/maja-pavlek-9a0370182/' },
+            { name: 'Andreas M. Jensen', title: 'Head of Partnerships', email: 'amj@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2023/04/Andreas-e1715608226363.png', linkedin: 'https://www.linkedin.com/in/andreas-marco-jensen/' },
             { name: 'Joanna Opoka', title: 'Project Manager', email: 'jop@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2022/07/Joannaa.png', linkedin: 'https://www.linkedin.com/in/joanna-opoka/' },
-            { name: 'Keyvan T. Bamdej', title: 'Head of PR & Communications', email: 'kba@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/04/Keyvan-Thomsen-Bamdej-Bamdej-Communication-ApS-Portrait-1-scaled.jpg', linkedin: 'https://www.linkedin.com/in/keyvan-bamdej/' },
-            { name: 'Tansu Kjerimi', title: 'Global Partnership Manager', email: 'tkj@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/11/Tansu-2024-scaled-e1732094965371.jpg', linkedin: 'https://www.linkedin.com/in/tansu-kjerimi/' },
-            { name: 'Mirwais Fedai', title: 'Head of Projects', email: 'mfe@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2022/12/Mirwais-e1715608286723.jpg', linkedin: 'https://www.linkedin.com/in/mirwais-fedai/' },
-            { name: 'Michael Bak', title: 'Head of Investor Relations', email: 'mba@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2022/07/Michael-1.png', linkedin: 'https://www.linkedin.com/in/michael-bak/' },
-            { name: 'Anne-Sophie Pedersen', title: 'Partnership Manager', email: 'asp@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2023/05/Anne-Sophie.png', linkedin: 'https://www.linkedin.com/in/anne-sophie-pedersen/' },
-            { name: 'Harry Justus', title: 'Senior Project Manager', email: 'hej@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2022/03/Harry-e1715609265709.jpg', linkedin: 'https://www.linkedin.com/in/harry-justus/' },
+            { name: 'Keyvan T. Bamdej', title: 'Head of PR & Communications', email: 'kba@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/04/Keyvan-Thomsen-Bamdej-Bamdej-Communication-ApS-Portrait-1-scaled.jpg', linkedin: 'https://www.linkedin.com/in/keyvanbamdej/' },
+            { name: 'Tansu Kjerimi', title: 'Global Partnership Manager', email: 'tkj@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/11/Tansu-2024-scaled-e1732094965371.jpg', linkedin: 'https://www.linkedin.com/in/tansu-kjerimi-618522195/' },
+            { name: 'Michael Bak', title: 'Head of Investor Relations', email: 'mba@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2022/07/Michael-1.png', linkedin: 'https://www.linkedin.com/in/michaelbak/' },
+            { name: 'Anne-Sophie Pedersen', title: 'Partnership Manager', email: 'asp@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2023/05/Anne-Sophie.png', linkedin: 'https://www.linkedin.com/in/anne-sophie-pedersen-606399167/' },
+            { name: 'Harry Justus', title: 'Senior Project Manager', email: 'hej@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2022/03/Harry-e1715609265709.jpg', linkedin: 'https://www.linkedin.com/in/harryethanjustus/' },
             { name: 'Jan Thordsen', title: 'Project Manager', email: 'jan@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2023/02/Jand-e1715609491474.png', linkedin: 'https://www.linkedin.com/in/jan-thordsen/' },
-            { name: 'Auri Baciauskas', title: 'Senior Digital Designer', email: 'abs@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2021/11/Auri-e1641823868757.jpg', linkedin: 'https://www.linkedin.com/in/auri-baciauskas/' },
-            { name: 'Dianne A. Binesse', title: 'Project Manager', email: 'dib@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/03/Dianne.jpg', linkedin: 'https://www.linkedin.com/in/dianne-binesse/' },
-            { name: 'Allan N. Hadzimahovic', title: 'Project Controller', email: 'alh@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/03/Allan.jpg', linkedin: 'https://www.linkedin.com/in/allan-hadzimahovic/' },
-            { name: 'Sandra B. Frandsen', title: 'Executive Assistant', email: 'sfr@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2023/02/Sandra_V.png', linkedin: 'https://www.linkedin.com/in/sandra-frandsen/' },
-            { name: 'Sadia Beg', title: 'Administrator', email: 'sab@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2023/10/Sadia_.png', linkedin: 'https://www.linkedin.com/in/sadia-beg/' },
-            { name: 'Pedro Granacha', title: 'Program Lead', email: 'pgr@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/04/Pedro-Granacha.png', linkedin: 'https://www.linkedin.com/in/pedro-granacha/' },
-            { name: 'Maria Krupa', title: 'Marketing Growth Lead', email: 'mak@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/05/Maria.jpg', linkedin: 'https://www.linkedin.com/in/maria-krupa/' },
-            { name: 'Roxy Dat', title: 'Brand Ambassador & Sales Development', email: 'rad@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/05/Roxana.jpg', linkedin: 'https://www.linkedin.com/in/roxy-dat/' },
-            { name: 'Shabana Naseri', title: 'Executive Personal Assistant', email: 'sna@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/07/Shabana-TechBBQ.jpg', linkedin: 'https://www.linkedin.com/in/shabana-naseri/' },
-            { name: 'Sara Sørensen', title: 'Project Manager', email: 'sgs@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/05/Sara.jpg', linkedin: 'https://www.linkedin.com/in/sara-sorensen/' },
-            { name: 'Amalie Berre Eriksen', title: 'Partnership Success Manager', email: 'ame@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/08/Amalie-scaled-e1723701929996.jpg', linkedin: 'https://www.linkedin.com/in/amalie-eriksen/' },
+            { name: 'Auri Baciauskas', title: 'Senior Digital Designer', email: 'abs@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2021/11/Auri-e1641823868757.jpg', linkedin: 'https://www.linkedin.com/in/auribaci' },
+            { name: 'Dianne A. Binesse', title: 'Project Manager', email: 'dib@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/03/Dianne.jpg', linkedin: 'https://www.linkedin.com/in/dianne-alexandra-binesse-1bb3a9173/' },
+            { name: 'Allan N. Hadzimahovic', title: 'Project Controller', email: 'alh@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/03/Allan.jpg', linkedin: 'https://www.linkedin.com/in/allanprojectmanager/' },
+            { name: 'Sandra B. Frandsen', title: 'Executive Assistant', email: 'sfr@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2023/02/Sandra_V.png', linkedin: 'https://www.linkedin.com/in/sandra-brunet-frandsen-b694b9193/' },
+            { name: 'Sadia Beg', title: 'Administrator', email: 'sab@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2023/10/Sadia_.png', linkedin: 'https://www.linkedin.com/in/sadia-beg-213b092a/' },
+            { name: 'Pedro Granacha', title: 'Program Lead', email: 'pgr@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/04/Pedro-Granacha.png', linkedin: '"https://www.linkedin.com/in/granacha/' },
+            { name: 'Maria Krupa', title: 'Marketing Growth Lead', email: 'mak@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/05/Maria.jpg', linkedin: 'https://www.linkedin.com/in/maria-krupa-/' },
+            { name: 'Roxy Dat', title: 'Brand Ambassador & Sales Development', email: 'rad@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/05/Roxana.jpg', linkedin: 'https://www.linkedin.com/in/roxydat/' },
+            { name: 'Shabana Naseri', title: 'Executive Personal Assistant', email: 'sna@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/07/Shabana-TechBBQ.jpg', linkedin: 'https://www.linkedin.com/in/shabana-naseri-b41866267/' },
+            { name: 'Sara Sørensen', title: 'Project Manager', email: 'sgs@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/05/Sara.jpg', linkedin: 'http://www.linkedin.com/in/saraanastasiagrundsorensen/' },
+            { name: 'Amalie Berre Eriksen', title: 'Partnership Success Manager', email: 'ame@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/08/Amalie-scaled-e1723701929996.jpg', linkedin: 'https://www.linkedin.com/in/amalie-holm-berre-eriksen-044454182/' },
+            { name: 'Chloe Passerat de la Chapelle', title: 'Social Media Coordinator', email: 'cpc@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/09/Chloe-Passerat.jpg', linkedin: 'https://www.linkedin.com/in/chloe-passerat-de-la-chapelle-45b473164/' }
+        ];
+
+        const entertainmentTeam = [
             { name: 'Goofy', title: 'Chief Entertainment Officer', email: '', img: 'https://techbbq.dk/wp-content/uploads/2023/07/Goofie.png', linkedin: '' },
             { name: 'Cookie', title: 'Chief Entertainment Officer', email: '', img: 'https://techbbq.dk/wp-content/uploads/2023/07/Cooki.png', linkedin: '' }
         ];
@@ -85,52 +86,12 @@
             const card = createMemberCard(member);
             grid.appendChild(card);
         });
-    </script>
 
-    <script>
-        // Slideshow functionality
-        function startSlideshow() {
-            const slideshows = document.querySelectorAll('.slideshow');
-            
-            slideshows.forEach(slideshow => {
-                const slides = slideshow.querySelectorAll('.slide');
-                let currentSlide = 0;
-                
-                setInterval(() => {
-                    slides[currentSlide].classList.remove('active');
-                    currentSlide = (currentSlide + 1) % slides.length;
-                    slides[currentSlide].classList.add('active');
-                }, 5000);
-            });
-        }
-
-        // Popup functionality
-        document.querySelectorAll('.card[data-popup]').forEach(card => {
-            card.addEventListener('click', () => {
-                const popupId = card.getAttribute('data-popup');
-                document.getElementById(popupId).classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
+        const grid2 = document.querySelector('.grid-2');
+        entertainmentTeam.forEach(member => {
+            const card = createMemberCard(member);
+            grid2.appendChild(card);
         });
-
-        document.querySelectorAll('.popup-close').forEach(close => {
-            close.addEventListener('click', (e) => {
-                e.stopPropagation();
-                close.closest('.popup').classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-
-        document.querySelectorAll('.popup').forEach(popup => {
-            popup.addEventListener('click', (e) => {
-                if (e.target === popup) {
-                    popup.classList.remove('active');
-                    document.body.style.overflow = '';
-                }
-            });
-        });
-
-        startSlideshow();
     </script>
 </body>
 </html>

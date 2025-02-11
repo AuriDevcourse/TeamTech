@@ -20,8 +20,17 @@ body {
 .grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto auto;
     gap: 20px;
     padding: 20px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
 }
 
 .card {
@@ -131,56 +140,6 @@ body {
     color: #d9d9d9;
 }
 
-.slideshow {
-    position: relative;
-    overflow: hidden;
-}
-
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity 500ms ease-in-out;
-    transform: scale(1);
-}
-
-.slide.active {
-    opacity: 1;
-    z-index: 1;
-    animation: kenburns 5000ms linear forwards;
-}
-
-@keyframes kenburns {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.1);
-    }
-}
-
-.card .vicinity-svg {
-    background-color: #d9d9d9;
-    border-radius: 8px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-}
-
-.card .vicinity-svg img {
-    height: auto;
-    width: 200px;
-    max-height: 130px;
-    object-fit: contain;
-}
-
-
-
 .subtitle {
     font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
@@ -214,11 +173,19 @@ body {
         gap: 15px;
         padding: 15px;
     }
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 1200px) {
     .grid {
         grid-template-columns: repeat(4, 1fr);
+    }
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
     }
 }
 
@@ -227,54 +194,18 @@ body {
         grid-template-columns: repeat(2, 1fr);
         padding: 1rem;
     }
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
+    }
+    
     
     .card-image {
         height: 250px;
     }
 
-    .popup-content {
-        width: 95%;
-        padding: 1.5rem;
-        margin: 1rem;
-    }
-
-    .popup-image {
-        height: 200px;
-    }
-
-    .title {
-        font-size: 20px;
-        min-height: 50px;
-    }
-
-    .popup-description {
-        font-size: 14px;
-        margin: 1rem 0;
-    }
-
-    .neon-button {
-        width: 100%;
-        text-align: center;
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
     .card {
         height: auto;
         min-height: 350px;
-    }
-
-    .popup-content {
-        padding: 1rem;
-    }
-
-    .popup-image {
-        height: 180px;
-    }
-
-    .popup-close {
-        top: 0.5rem;
-        right: 1rem;
     }
 }
