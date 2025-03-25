@@ -41,7 +41,7 @@
             { name: 'Dianne A. Binesse', title: 'Project Manager', email: 'dib@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/03/Dianne.jpg', linkedin: 'https://www.linkedin.com/in/dianne-alexandra-binesse-1bb3a9173/' },
             { name: 'Allan N. Hadzimahovic', title: 'Project Controller', email: 'alh@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/03/Allan.jpg', linkedin: 'https://www.linkedin.com/in/allanprojectmanager/' },
             { name: 'Sandra B. Frandsen', title: 'Executive Assistant', email: 'sfr@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2023/02/Sandra_V.png', linkedin: 'https://www.linkedin.com/in/sandra-brunet-frandsen-b694b9193/' },
-            { name: 'Pedro Granacha', title: 'Program Manager', email: 'pgr@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/04/Pedro-Granacha.png', linkedin: '"https://www.linkedin.com/in/granacha/' },
+            { name: 'Pedro Granacha', title: 'Program Manager', email: 'pgr@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/04/Pedro-Granacha.png', linkedin: 'https://www.linkedin.com/in/granacha/' },
             { name: 'Maria Krupa', title: 'Growth & Data Analytics Lead', email: 'mak@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/05/Maria.jpg', linkedin: 'https://www.linkedin.com/in/maria-krupa-/' },
             { name: 'Roxy Dat', title: 'SDR & Community Partnership Manager', email: 'rad@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/05/Roxana.jpg', linkedin: 'https://www.linkedin.com/in/roxydat/' },
             { name: 'Shabana Naseri', title: 'Executive Personal Assistant', email: 'sna@techbbq.org', img: 'https://techbbq.dk/wp-content/uploads/2024/07/Shabana-TechBBQ.jpg', linkedin: 'https://www.linkedin.com/in/shabana-naseri-b41866267/' },
@@ -96,5 +96,17 @@
             grid2.appendChild(card);
         });
     </script>
+
+<script>
+    function sendHeight() {
+      parent.postMessage({
+        iframeHeight: document.documentElement.scrollHeight
+      }, "*");
+    }
+  
+    window.addEventListener("load", sendHeight);
+    window.addEventListener("resize", sendHeight);
+  </script>
+  
 </body>
 </html>
